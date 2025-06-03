@@ -253,16 +253,16 @@ publishing {
             }
         }
 
-        repositories {
-            maven {
-                url = uri(getRepositoryUrl())
-                isAllowInsecureProtocol = true
-                credentials {
-                    username = getRepositoryUsername()
-                    password = getRepositoryPassword()
-                }
-            }
-        }
+//        repositories {
+//            maven {
+//                url = uri(getRepositoryUrl())
+//                isAllowInsecureProtocol = true
+//                credentials {
+//                    username = getRepositoryUsername()
+//                    password = getRepositoryPassword()
+//                }
+//            }
+//        }
     }
 }
 
