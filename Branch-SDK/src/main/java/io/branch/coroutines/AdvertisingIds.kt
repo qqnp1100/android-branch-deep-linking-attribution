@@ -13,7 +13,8 @@ suspend fun getGoogleAdvertisingInfoObject(context: Context): AdvertisingIdClien
         try {
             AdvertisingIdClient.getAdvertisingIdInfo(context)
         }
-        catch (exception: Exception) {
+        catch (exception: Throwable) {
+            //可能会NoClassDefFoundError
             BranchLogger.w("Caught getGoogleAdvertisingInfoObject exception: $exception")
             null
         }
@@ -25,7 +26,7 @@ suspend fun getHuaweiAdvertisingInfoObject(context: Context):  com.huawei.hms.ad
         try {
             com.huawei.hms.ads.identifier.AdvertisingIdClient.getAdvertisingIdInfo(context)
         }
-        catch (exception: Exception) {
+        catch (exception: Throwable) {
             BranchLogger.w("Caught getHuaweiAdvertisingInfoObject exception: $exception")
             null
         }
